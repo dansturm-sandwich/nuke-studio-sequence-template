@@ -24,27 +24,7 @@ def remove_all_audio_tracks():
 	sequence = hiero.ui.activeSequence()
 	audio_tracks = [track for track in sequence.audioTracks()]
 	for audio_track in audio_tracks:
-    	sequence.removeTrack(audio_track)
-
-    audio_track = hiero.core.AudioTrack("Audio 1")
+		sequence.removeTrack(audio_track)
+	audio_track = hiero.core.AudioTrack("Audio 1")
 	sequence.addTrack(audio_track)
 
-
-
-
-# def add_slate_effect():
-# 	sequence = hiero.ui.activeSequence()
-
-# 	video_track = sequence.videoTracks()[0]
-
-# 	text_effect = hiero.core.EffectTrackItem('Text', 'net.fx.text')
-
-# 	# Set the parameters for the text effect
-# 	text_effect.node().knob('message').setValue('Hello World')
-
-# 	# Add the text effect to the video track
-# 	video_track.addTrackItem(text_effect)
-
-# 	# Set the in and out times for the text effect
-# 	text_effect.setTimelineIn(0)
-# 	text_effect.setTimelineOut(sequence.duration() - 1)
